@@ -3,8 +3,8 @@
 ## Description
 An application the will allow the user to be able to view create and track daily workouts. They will be able to log multiple exercises in a workout on a given day. They should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, they should be able to track their distance traveled.
 ## Table of Contents
-- [Usage](#usage)
 - [Installation](#installation)
+- [Usage](#usage)
 - [License](#license)
 ## Installation
 Required Dependencies:
@@ -13,6 +13,8 @@ Required Dependencies:
 - Morgan
 ## Usage
 The site is still under construction and isn't online yet.
+  
+![Homepage](images/homepage.png)
 ## License
 This Product is licensed under the MIT license.  
 For more information please visit: https://spdx.org/licenses/MIT.html
