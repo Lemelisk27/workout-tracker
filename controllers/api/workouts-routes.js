@@ -19,4 +19,20 @@ router.get("/",(req,res)=>{
         })
 })
 
+router.get("/range",(req,res)=>{
+    db.Workout.aggregate([
+        {
+            $addFields: {
+                "totalDuration": {$sum: "$exercises.duration"},
+            }
+        }
+    ]).sort({"day":-1}).limit(7)
+    .then(dbRange=>{
+        res.json(dbRange)
+    })
+    .catch(err=>{
+        res.json(err)
+    })
+})
+
 module.exports = router
