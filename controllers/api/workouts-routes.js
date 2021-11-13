@@ -4,11 +4,17 @@ const mongoose = require("mongoose");
 const db = require("../../models")
 
 router.get("/",(req,res)=>{
-    db.Workout.find({})
-        .then(dbWorkout =>{
+    db.Workout.aggregate([
+        {
+            $addFields: {
+                "totalDuration": {$sum: "$exercises.duration"},
+            }
+        }
+    ])
+        .then(dbWorkout=>{
             res.json(dbWorkout)
         })
-        .catch(err => {
+        .catch(err=>{
             res.json(err)
         })
 })
