@@ -12,9 +12,11 @@ Required Dependencies:
 - Mongoose
 - Morgan
 ## Usage
-The site is still under construction and isn't online yet.
+Heroku Link - [Fitness Tracker](https://enigmatic-citadel-42972.herokuapp.com/)
   
 ![Homepage](images/homepage.png)
+![Dashboard](images/dashboard.png)
+![New Workout](images/newworkout.png)
 ## License
 This Product is licensed under the MIT license.  
 For more information please visit: https://spdx.org/licenses/MIT.html
