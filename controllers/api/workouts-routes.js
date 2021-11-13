@@ -35,4 +35,33 @@ router.get("/range",(req,res)=>{
     })
 })
 
+router.put("/:id", (req,res)=>{
+    console.log(req.body)
+    db.Workout.updateOne({
+        _id:mongoose.Types.ObjectId(req.params.id)
+    },
+    {
+        $push:{"exercises":req.body}
+    })
+    .then(updateDb=>{
+        res.json(updateDb)
+    })
+    .catch(err=>{
+        res.json(err)
+    })
+})
+
+router.post("/", (req,res)=>{
+    db.Workout.insertMany(req.body)
+    .then(insertDb=>{
+        console.log(insertDb[0]._id)
+        const _id = insertDb[0]._id
+        console.log(_id)
+        res.json(_id)
+    })
+    .catch(err=>{
+        res.json(err)
+    })
+})
+
 module.exports = router

@@ -120,21 +120,7 @@ const workoutSeed = [
         weight: 300,
         reps: 10,
         sets: 4,
-      },
-      {
-        type: 'resistance',
-        name: 'Quad Press',
-        duration: 30,
-        weight: 300,
-        reps: 10,
-        sets: 4,
-      },
-      {
-        type: 'cardio',
-        name: 'Running',
-        duration: 25,
-        distance: 4,
-      },
+      }
     ],
   },
 ];
